@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    background-color: #000; /* Changed to black */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Set default text color to white for contrast */
+    overflow-x: hidden;
+}
+
+header, footer, nav ul li {
+    animation: fadeInDown 1s ease-in-out; /* Add fade-in animation */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Video Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('path_to_video.mp4') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; /* Slight transparency for effect */
+    pointer-events: none;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #FFD700; /* Golden color */
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #FFD700;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 14px 20px;
+}
+
+nav ul li a {
+    color: #FFD700; /* Golden color for links */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation for hover */
+}
+
+nav ul li a:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+    color: #fff; /* Ensuring readability */
+}
+
+h2 {
+    color: #FFD700; /* Golden color */
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Image hover zoom */
+}
+
+img:hover {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 215, 0, 0.2); /* Transparent gold background for the table */
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out; /* Animation on load */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+table, th, td {
+    border: 1px solid #FFD700; /* Golden borders */
+    padding: 10px;
+    color: #fff;
+}
+
+th {
+    background-color: #333;
+    text-align: left;
+}
+
+/* Form Styling */
+form {
+    background-color: rgba(255, 215, 0, 0.1); /* Semi-transparent form background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Golden box shadow */
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #FFD700; /* Golden borders */
+    border-radius: 4px;
+    background-color: #222; /* Dark background for inputs */
+    color: #fff;
+}
+
+form input[type="submit"] {
+    background-color: #FFD700;
+    color: #000;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e0b800; /* Darker gold on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #FFD700;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+/* Button Hover Animation */
+button:hover, form input[type="submit"]:hover {
+    transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+/* Box Styling for Golden Boxes */
+.box {
+    background-color: rgba(255, 215, 0, 0.2); /* Semi-transparent gold */
+    border: 2px solid #FFD700;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    animation: fadeIn 1.2s ease-in-out;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+}

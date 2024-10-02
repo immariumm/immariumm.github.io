@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Personal Recipe Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section with Full Video Background -->
+    <header>
+        <div class="video-wrapper">
+            <video autoplay muted loop id="headerVideo">
+                <source src="headervideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="header-content">
+                <h1>My Personal Recipe Book</h1>
+                <p>Discover, Create, and Share Your Favorite Recipes</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#recipe1">Recipe 1: Pasta</a></li>
+            <li><a href="#recipe2">Recipe 2: Salad</a></li>
+            <li><a href="#recipe3">Recipe 3: Dessert</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section for Recipe 1 -->
+        <section id="recipe1" class="recipe-section">
+            <h2>Pasta Recipe</h2>
+            <img src="pasta.jpg" alt="Delicious Pasta" class="recipe-img">
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>Pasta - 200g</li>
+                <li>Olive Oil - 2 tbsp</li>
+                <li>Garlic - 3 cloves</li>
+                <li>Tomatoes - 2 large, diced</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Boil the pasta in salted water.</li>
+                <li>Heat olive oil and sauté garlic.</li>
+                <li>Add tomatoes and simmer for 10 minutes.</li>
+                <li>Mix the pasta with the sauce.</li>
+            </ol>
+        </section>
+
+        <!-- Section for Recipe 2 -->
+        <section id="recipe2" class="recipe-section">
+            <h2>Salad Recipe</h2>
+            <img src="salad.jpg" alt="Fresh Salad" class="recipe-img">
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>Lettuce - 1 head</li>
+                <li>Olives - 10 pieces</li>
+                <li>Cucumber - 1, sliced</li>
+                <li>Feta Cheese - 100g</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Chop the lettuce and cucumber.</li>
+                <li>Add olives and feta cheese.</li>
+                <li>Toss the ingredients together.</li>
+                <li>Drizzle with olive oil and serve.</li>
+            </ol>
+        </section>
+
+        <!-- Section for Recipe 3 -->
+        <section id="recipe3" class="recipe-section">
+            <h2>Dessert Recipe</h2>
+            <img src="dessert.jpg" alt="Sweet Dessert" class="recipe-img">
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>Chocolate - 200g</li>
+                <li>Butter - 100g</li>
+                <li>Sugar - 1/2 cup</li>
+                <li>Eggs - 2</li>
+            </ul>
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Melt the chocolate and butter together.</li>
+                <li>Beat eggs and sugar until fluffy.</li>
+                <li>Fold in the chocolate mixture.</li>
+                <li>Bake at 180°C for 20 minutes.</li>
+            </ol>
+        </section>
+
+        <!-- Nutritional Information Table -->
+        <section>
+            <h2>Nutritional Information</h2>
+            <table>
+                <tr>
+                    <th>Recipe</th>
+                    <th>Calories</th>
+                    <th>Fat (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Protein (g)</th>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>400</td>
+                    <td>15</td>
+                    <td>60</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Salad</td>
+                    <td>150</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Dessert</td>
+                    <td>500</td>
+                    <td>30</td>
+                    <td>50</td>
+                    <td>7</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Recipe Submission Form -->
+        <section>
+            <h2>Submit Your Own Recipe</h2>
+            <form id="recipeForm" action="thankyou.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="recipe">Recipe Name:</label>
+                <input type="text" id="recipe" name="recipe" required><br><br>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required></textarea><br><br>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="appetizer">Appetizer</option>
+                    <option value="main">Main Course</option>
+                    <option value="dessert">Dessert</option>
+                </select><br><br>
+
+                <label for="difficulty">Difficulty:</label>
+                <input type="radio" id="easy" name="difficulty" value="easy" checked> Easy
+                <input type="radio" id="medium" name="difficulty" value="medium"> Medium
+                <input type="radio" id="hard" name="difficulty" value="hard"> Hard<br><br>
+
+                <input type="submit" value="Submit Recipe">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Personal Recipe Book </p>
+        
+        <p>For more recipes, visit <a href="https://www.allrecipes.com" target="_blank">AllRecipes.com</a></p>
+
+        <p> By Maryam Naz </p>
+    </footer>
+
+ 
+</body>
+</html>
